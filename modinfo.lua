@@ -5,7 +5,7 @@ end
 name = 'No Spacing'
 name = e_or_z("No Spacing", "建造无间距")
 author = 'OpenSource'
-version = '1.0.2'
+version = '1.0.3'
 description = e_or_z(
     [[
 Deploy all things with no spacing. 
@@ -44,14 +44,14 @@ local function AddConfig(label, name, hover, options, default)
 			{description = e_or_z('Small', '小间距'), data = 1, hover = e_or_z('Small spacing', '有较小间距')},
 			{description = e_or_z('Default', '默认'), data = false, hover = e_or_z('Default spacing', '默认间距')}
 		},
-		default = default or true
+		default = default
 	}
 end
 
 configuration_options =
 {
-    AddConfig(e_or_z("Building", "建造类"), "build"),
-    AddConfig(e_or_z("Deploy and Planting", "放置 & 种植类"), "deploy"),
+    AddConfig(e_or_z("Building", "建造类"), "build", "", nil, 0),
+    AddConfig(e_or_z("Deploy and Planting", "放置 & 种植类"), "deploy", "", nil, 0),
     AddConfig(
         e_or_z("Specific Buildings", "部分建筑"),
         "GoThrough",
