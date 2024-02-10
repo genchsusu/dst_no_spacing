@@ -2,10 +2,9 @@ local function e_or_z(en, zh)
 	return (locale == "zh" or locale == "zhr" or locale == "zht") and zh or en
 end
 
-name = 'No Spacing'
 name = e_or_z("No Spacing", "建造无间距")
 author = 'OpenSource'
-version = '1.0.3'
+version = '1.0.4'
 description = e_or_z(
     [[
 Deploy all things with no spacing. 
